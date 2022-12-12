@@ -1,0 +1,11 @@
+version: "3.6"
+services:
+    test:
+        image: thecodingmachine/nodejs:v2-18-bullseye
+        command: yarn run prettier
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - "9231:9229"
+#        environment:
+#            STARTUP_COMMAND_1: yarn install
